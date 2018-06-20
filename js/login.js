@@ -19,6 +19,7 @@ $(function(){
         url:`${APP.baseUrl}/employee/employeeLogin`,
         data:result,
         success:function(response){
+            //判断登录状态
             if(response.success){
                 alert('登录成功')
                 location.href = "user.html"
