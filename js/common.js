@@ -10,6 +10,8 @@ $(function(){
 
 });
 
+//允许cookie的写入与发送
+$.ajaxSetup({crossDomain: true, xhrFields: {withCredentials: true}});
 
 var APP = {
 	baseUrl:'http://fullstack.net.cn:3000'
