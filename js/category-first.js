@@ -43,4 +43,28 @@ $(function(){
             }
         })
     }
+
+    $('#addCategoryFirst').on('click',function(){
+        var categoryName = $.trim($('#categoryName').val());
+        if(!categoryName){
+            alert('请输入分类名称');
+            return;
+        } else {
+            $.ajax({
+            type:'post',
+            url: `${APP.baseUrl}/category/addTopCategory`,
+            data : {
+                categoryName:categoryName
+            },
+            success: function(response){
+                if(response.success){
+                    location.reload();
+                } else {
+                    alert(response.message);
+                }
+            }
+        })
+        }
+        
+    })
 })
