@@ -59,6 +59,7 @@ $(function(){
             success: function(response){
                 if(response.success){
                     location.reload();
+                    // $('#addCategoryBox').style.display = 'none';
                 } else {
                     alert(response.message);
                 }
